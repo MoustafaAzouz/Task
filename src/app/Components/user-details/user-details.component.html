@@ -1,0 +1,40 @@
+
+
+<div class="header">
+  <h2 class="nav-item">
+    <mat-icon>person</mat-icon>
+    User
+  </h2>
+</div>
+
+
+<div class="user-details" *ngIf="user; else errorTemplate">
+  <img [src]="user.data.avatar" alt="{{ user.data.first_name }} {{ user.data.last_name }}">
+  <p>
+
+
+    Full-Name:  <span> {{ user.data.first_name }} {{ user.data.last_name }}</span>
+
+  </p>
+  <p>
+
+
+    Email:  <span> {{ user.data.email }}</span>
+
+  </p>
+  <a [routerLink]="['/']" routerLinkActive="router-link-active" style="text-decoration:none">
+    <button
+      [@hoverRight]="hovered ? 'hovered' : 'default'"
+      (mouseenter)="setHover(true)"
+      (mouseleave)="setHover(false)"
+    >
+      Back
+    </button>
+  </a>
+</div>
+
+<ng-template #errorTemplate>
+  <div class="error-message">
+    {{ error }}
+  </div>
+</ng-template>

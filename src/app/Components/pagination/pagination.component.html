@@ -1,0 +1,16 @@
+<div class="pagination">
+  <button mat-button (click)="previousPage()" [disabled]="page <= 1">Previous</button>
+  
+  <div class="page-numbers">
+    <div
+      class="page-number"
+      *ngFor="let p of pages"
+      [ngClass]="{ 'active': p === page }"
+      (click)="goToPage(p)"
+    >
+      {{ p }}
+    </div>
+  </div>
+  
+  <button mat-button (click)="nextPage()" [disabled]="page >= totalPages">Next</button>
+</div>

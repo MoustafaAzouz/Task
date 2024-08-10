@@ -1,0 +1,87 @@
+mat-toolbar {
+  background-color: #3f51b5; 
+  color: white;
+}
+
+mat-toolbar-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.dashboard-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.dashboard-title mat-icon {
+  margin-right: 0.5rem; 
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color: white; 
+}
+
+.nav-item mat-icon {
+  margin-right: 0.5rem; 
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #141411;
+}
+
+.login mat-icon {
+  margin-right: 0.5rem;
+  font-size: 2rem;
+}
+
+
+@media (max-width: 768px) {
+  mat-toolbar-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dashboard-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem; 
+  }
+
+  .menu-button {
+    display: block; 
+    margin: 0; 
+  }
+
+  .login {
+    font-size: 1rem;
+  }
+
+  .nav-items {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-title {
+    font-size: 1rem;
+  }
+
+  .login {
+    font-size: 0.9rem;
+  }
+}
