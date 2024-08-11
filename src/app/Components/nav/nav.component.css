@@ -1,15 +1,15 @@
 mat-toolbar {
-    background-color: #3f51b5; 
-    color: white; 
+    background-color: #3f51b5;
+    color: white;
     width: 100%;
     height: 100px;
   }
   
-  mat-toolbar-row {
+  .space {
     display: flex;
     align-items: center;
-    justify-content:space-around;
-    width: 80%; 
+    justify-content: space-between;
+    width: 90%;
     margin: 0 auto;
   }
   
@@ -17,55 +17,59 @@ mat-toolbar {
     display: flex;
     align-items: center;
     font-size: 1.5rem;
-    color: white; 
+    color: white;
   }
   
   .dashboard-title mat-icon {
-    margin-right: 0.5rem; 
+    margin-right: 0.5rem;
   }
   
   .search-container {
-    flex-grow: 1; 
+    flex-grow: 1;
     text-align: center;
+    margin-right: 4rem;
   }
   
   mat-form-field input {
-    padding-right: 3rem; 
-    border-radius: 50px; 
-    width: 100%; 
-    box-sizing: border-box; 
+    padding-right: 3rem;
+    border-radius: 50px;
+    width: 100%;
+    box-sizing: border-box;
   }
   
-  /* Icon button styling */
   mat-form-field .mat-icon-button {
     color: rgba(255, 255, 255, 0.7);
-    position: absolute; 
-    right: 1rem; 
+    position: absolute;
+    right: 1rem;
     top: 50%;
     transform: translateY(-50%);
   }
   
   mat-form-field .mat-icon {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
   }
   
   .login {
     display: flex;
     align-items: center;
     font-size: 1.2rem;
-    color: white; 
+    color: white;
   }
   
   .login mat-icon {
-    margin-right: 0.5rem; 
-    font-size: 2rem; 
+    margin-right: 0.5rem;
+    font-size: 2rem;
   }
   
   @media (max-width: 768px) {
-    mat-toolbar-row {
+    mat-toolbar {
+      height: auto;
+    }
+  
+    .space {
       flex-direction: column;
       align-items: flex-start;
-      width: 100%; 
+      width: 100%;
     }
   
     .dashboard-title {
@@ -75,11 +79,17 @@ mat-toolbar {
   
     .login {
       font-size: 1rem;
+      margin-top: 1rem;
     }
   
     .search-container {
       width: 100%;
       margin-bottom: 1rem;
+      margin-right: 0;
+    }
+  
+    mat-toolbar-row {
+      width: 100%;
     }
   }
   
@@ -93,7 +103,16 @@ mat-toolbar {
     }
   
     .login mat-icon {
-      font-size: 1.5rem; 
+      font-size: 1.5rem;
+    }
+  
+    .search-container {
+      margin-bottom: 0.5rem;
+    }
+  
+    mat-toolbar {
+      padding: 10px 0;
+      height: auto;
     }
   }
   
