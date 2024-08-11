@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Router } from '@angular/router';
-import { SearchComponent } from './Components/search/search.component';
-import { LoadingComponent } from './Components/loading/loading.component';
+import { RouterModule } from '@angular/router';
+
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ErrorInterceptor } from './Services/interceptors/error.interceptor';
-import { MatIconModule } from '@angular/material/icon';
-import { MatToolbarModule } from '@angular/material/toolbar';
+
 import { NavComponent } from './Components/nav/nav.component';
 
 @Component({
