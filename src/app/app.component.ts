@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { SearchComponent } from './Components/search/search.component';
 import { LoadingComponent } from './Components/loading/loading.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -21,4 +21,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 export class AppComponent {
   title = 'User Dashboard';
 
+  constructor(private router: Router) {}
+
+  onSearch(searchId: string): void {
+    if (searchId) {
+      this.router.navigate(['/user', searchId]);
+    }
+  }
 }

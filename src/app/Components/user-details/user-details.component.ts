@@ -27,7 +27,7 @@ import { MatIcon } from '@angular/material/icon';
 })
 export class UserDetailsComponent implements OnInit {
   user: any;
-  error: string | null = null; // Define an error property
+  error: string | null = null; 
   hovered: boolean = false;
 
   constructor(
@@ -36,19 +36,21 @@ export class UserDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id');
-    if (id) {
-      this.userService.fetchUserById(+id).subscribe({
-        next: (data: any) => {
-          this.user = data;
-          this.error = null; // Clear error on successful fetch
-        },
-        error: (err) => {
-          this.error = 'Failed to load user details. Please try again later.';
-          this.user = null; // Clear user data on error
-        }
-      });
-    }
+    this.route.paramMap.subscribe((params) => {
+      const id = params.get('id');
+      if (id) {
+        this.userService.fetchUserById(+id).subscribe({
+          next: (data: any) => {
+            this.user = data;
+            this.error = null; 
+          },
+          error: (err) => {
+            this.error = 'Failed to load user details. Please try again later.';
+            this.user = null; 
+          }
+        });
+      }
+    });
   }
 
   setHover(value: boolean): void {

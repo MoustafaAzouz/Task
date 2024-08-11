@@ -8,10 +8,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { LoadingComponent } from '../loading/loading.component';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { SearchComponent } from '../search/search.component';
 import { PaginationComponent } from '../pagination/pagination.component';
 import { BorderBottomDirective } from '../../Directives/my-directive.directive';
 import { MatIcon } from '@angular/material/icon';
+
 
 @Component({
   selector: 'app-user-list',
@@ -23,7 +23,6 @@ import { MatIcon } from '@angular/material/icon';
     MatButtonModule,
     LoadingComponent,
     BorderBottomDirective,
-    SearchComponent,
     MatSnackBarModule,
     PaginationComponent,
     MatIcon

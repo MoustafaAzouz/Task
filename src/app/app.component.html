@@ -1,31 +1,14 @@
 <mat-toolbar>
-  <mat-toolbar-row>
-    <span class="dashboard-title">
-      <mat-icon>dashboard</mat-icon>
-      User Dashboard
-    </span>
-    <div class="nav-items">
-      <h2 class="nav-item">
-        <mat-icon>home</mat-icon>
-        Home
-      </h2>
-      <h2 class="nav-item">
-        <mat-icon>analytics</mat-icon>
-        Reports
-      </h2>
-      <h2 class="nav-item">
-        <mat-icon>settings</mat-icon>
-        Settings
-      </h2>
-      <h2 class="nav-item">
-        <mat-icon>supervisor_account</mat-icon>
-        Users
-      </h2>
-    </div>
-    <h2 class="login">
-      <mat-icon>login</mat-icon>
-      Login
-    </h2>
-  </mat-toolbar-row>
+  <span class="dashboard-title">
+    <mat-icon>dashboard</mat-icon>
+    User Dashboard
+  </span>
+
+  <app-search class="search-container" (search)="onSearch($event)"></app-search>
+
+  <h2 class="login">
+    <mat-icon>login</mat-icon>
+    Login
+  </h2>
 </mat-toolbar>
 <router-outlet></router-outlet>

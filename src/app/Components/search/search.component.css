@@ -1,39 +1,29 @@
-/* Style the search container */
 .search-container {
   width: 50%;
-  max-width: 700px; /* Adjust as needed */
+  max-width: 700px;
   text-align: center;
+  height: 70px;
   display: flex;
-  margin:auto;
-  margin-top:2rem ;
-
-
+  align-items: center; 
+  margin: auto;
+  margin-top: 2rem;
 }
 
-/* Ensure the input has enough padding for the icon */
-mat-form-field input {
-  padding-right: 3rem; /* Adjust space for the icon */
+.search-container input {
   border-radius: 10rem;
- 
-
+  width: 100%; 
 }
 
-/* Style the icon button */
-mat-form-field .mat-icon-button {
-  color: rgba(0, 0, 0, 0.54); /* Adjust icon color as needed */
-  position: absolute; /* Position the button absolutely */
-  right: 0.5rem; /* Position it inside the field */
-  top: 50%; /* Center vertically */
-  transform: translateY(-50%); /* Correct vertical alignment */ 
-
+.search-container .mat-icon-button {
+  color: rgba(0, 0, 0, 0.54);
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
 }
 
-/* Ensure the icon button does not affect layout */
-mat-form-field .mat-icon-button {
-  margin: 0; /* Remove default margin */ 
-}
-
-/* Adjust the icon size if needed */
-mat-form-field .mat-icon {
-  font-size: 1.5rem; /* Adjust icon size as needed */
+.search-container .mat-icon {
+  font-size: 1.5rem;
+  color: black;
 }

@@ -12,6 +12,108 @@ mat-toolbar-row {
 }
 
 .dashboard-title {
+  mat-toolbar {
+    background-color: #3f51b5; 
+    color: white; 
+    width: 100%; 
+  }
+  
+  mat-toolbar-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%; 
+    margin: 0 auto; 
+  }
+  
+  .dashboard-title {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: white; 
+  }
+  
+  .dashboard-title mat-icon {
+    margin-right: 0.5rem; 
+  }
+  
+  .search-container {
+    flex-grow: 1; 
+    text-align: center; 
+  }
+  
+  mat-form-field input {
+    padding-right: 3rem; 
+    border-radius: 50px; 
+    width: 100%; 
+    box-sizing: border-box; 
+  }
+  
+  /* Icon button styling */
+  mat-form-field .mat-icon-button {
+    color: rgba(255, 255, 255, 0.7); /* Light icon color for better contrast */
+    position: absolute; /* Absolute positioning */
+    right: 1rem; /* Adjusted for better alignment */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Icon size and color */
+  mat-form-field .mat-icon {
+    font-size: 1.5rem; /* Icon size */
+  }
+  
+  /* Login section styling */
+  .login {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: white; /* Ensure login text color contrasts well */
+  }
+  
+  .login mat-icon {
+    margin-right: 0.5rem; /* Spacing between icon and text */
+    font-size: 2rem; /* Icon size */
+  }
+  
+  /* Responsive adjustments for tablet devices */
+  @media (max-width: 768px) {
+    mat-toolbar-row {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%; /* Full width on smaller screens */
+    }
+  
+    .dashboard-title {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+  
+    .login {
+      font-size: 1rem;
+    }
+  
+    .search-container {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  /* Responsive adjustments for mobile devices */
+  @media (max-width: 480px) {
+    .dashboard-title {
+      font-size: 1rem;
+    }
+  
+    .login {
+      font-size: 0.9rem;
+    }
+  
+    .login mat-icon {
+      font-size: 1.5rem; 
+    }
+  }
+  
   display: flex;
   align-items: center;
   font-size: 1.5rem;
