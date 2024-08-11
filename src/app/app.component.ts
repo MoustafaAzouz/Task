@@ -7,11 +7,12 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ErrorInterceptor } from './Services/interceptors/error.interceptor';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { NavComponent } from './Components/nav/nav.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterModule, SearchComponent, LoadingComponent, MatIconModule, MatToolbarModule],
+  imports: [CommonModule, RouterModule,NavComponent],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
   ],
@@ -21,11 +22,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 export class AppComponent {
   title = 'User Dashboard';
 
-  constructor(private router: Router) {}
+  constructor() {}
 
-  onSearch(searchId: string): void {
-    if (searchId) {
-      this.router.navigate(['/user', searchId]);
-    }
-  }
+
 }
