@@ -40,8 +40,8 @@ import {
   ɵɵstyleProp,
   ɵɵtemplate
 } from "./chunk-OQHU2IHM.js";
-import "./chunk-KT3RQDJZ.js";
 import "./chunk-LMFWYZLC.js";
+import "./chunk-KT3RQDJZ.js";
 import "./chunk-RVQ3RH6Y.js";
 
 // node_modules/@angular/material/fesm2022/progress-bar.mjs

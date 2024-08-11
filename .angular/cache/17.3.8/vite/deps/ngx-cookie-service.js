@@ -10,8 +10,8 @@ import {
   ɵɵdefineInjectable,
   ɵɵinject
 } from "./chunk-OQHU2IHM.js";
-import "./chunk-KT3RQDJZ.js";
 import "./chunk-LMFWYZLC.js";
+import "./chunk-KT3RQDJZ.js";
 import "./chunk-RVQ3RH6Y.js";
 
 // node_modules/ngx-cookie-service/fesm2022/ngx-cookie-service.mjs
